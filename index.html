@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="REALEDIT: A large-scale dataset of real-world image editing requests and their human-made edits.">
+  <meta name="keywords" content="image editing, dataset, machine learning, computer vision">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REALEDIT: Reddit Edits As a Large-scale Empirical Dataset for Image Transformations</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="./static/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="./static/images/teaser.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">REALEDIT: Reddit Edits As a Large-scale Empirical Dataset for Image Transformations</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <span>Petr Sushko</span>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/ayana-bharadwaj-1921a71b0/">Ayana Bharadwaj</a>,</span>
+            <span class="author-block">
+              <span>Zhi Yang Lim</span>,</span>
+            <span class="author-block">
+              <span>Vasily Ilin</span>,</span>
+            <span class="author-block">
+              <a href="https://github.com/bcaffee">Ben Caffee</a>,</span>
+            <span class="author-block">
+              <span>Dongping Chen</span>,</span>
+            <span class="author-block">
+              <a href="https://homes.cs.washington.edu/~mrsalehi/">Mohammadreza Salehi</a>,</span>
+            <span class="author-block">
+              <a href="https://chengyuhsieh.github.io/">Cheng-Yu Hsieh</a>,</span>
+            <span class="author-block">
+              <a href="https://ranjaykrishna.com/index.html">Ranjay Krishna</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">University of Washington</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.svg" alt="REALEDIT teaser image">
+      <h2 class="subtitle has-text-centered">
+        REALEDIT: A large-scale dataset of real-world image editing requests and their human-made edits.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Existing image editing models struggle to meet real-world demands; despite excelling in academic benchmarks,
+            we are yet to see them adopted to solve real user needs.
+            The datasets that power these models use artificial edits,
+            lacking the scale and ecological validity necessary to address the true diversity of user requests. In response, we
+            introduce REALEDIT, a large-scale image editing dataset
+            with authentic user requests and human-made edits sourced
+            from Reddit.
+          </p>
+          <p>
+            REALEDIT contains a test set of 9.3K examples the community can use to evaluate models on real
+            user requests. Our results show that existing models fall
+            short on these tasks, implying a need for realistic training
+            data. So, we introduce 48K training examples, with which
+            we train our REALEDIT model. Our model achieves substantial gains—outperforming competitors by up to 165 Elo
+            points in human judgment and 92% relative improvement
+            on the automated VIEScore metric on our test set.
+          </p>
+          <p>
+            We deploy our model back on Reddit, testing it on new requests,
+            and receive positive feedback. Beyond image editing, we explore REALEDIT's potential in detecting edited images by
+            partnering with a deepfake detection non-profit. Finetuning
+            their model on REALEDIT data improves its F1-score by
+            14 percentage points, underscoring the dataset's value for
+            broad, impactful applications.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{sushko2024realedit,
+  title     = {REALEDIT: Reddit Edits As a Large-scale Empirical Dataset for Image Transformations},
+  author    = {Sushko, Petr and Bharadwaj, Ayana and Lim, Zhi Yang and Ilin, Vasily and Caffee, Ben and Chen, Dongping and Salehi, Mohammadreza and Hsieh, Cheng-Yu and Krishna, Ranjay},
+  journal   = {arXiv preprint},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<div class="container" style="margin-bottom: 2rem;">
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
+        <p>
+          Website adapted from the following <a href="https://nerfies.github.io/">template</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
