@@ -50,7 +50,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"><span style="color: red;">[WEBSITE BUILDING IN PROGRESS]</span> REALEDIT: Reddit Edits As a Large-scale Empirical Dataset for Image Transformations</h1>
+          <!-- <h1 class="title is-1 publication-title"><span style="color: red;">[WEBSITE BUILDING IN PROGRESS]</span> REALEDIT: Reddit Edits As a Large-scale Empirical Dataset for Image Transformations</h1> -->
+          <h1 class="title is-1 publication-title">REALEDIT: Reddit Edits As a Large-scale Empirical Dataset for Image Transformations</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://peter-sushko.github.io/">Peter Sushko</a>,</sp an>
@@ -165,6 +166,77 @@
       </div>
     </div>
     <!--/ Abstract. -->
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Motivation</h2>
+        <div class="content has-text-justified">
+          <p>
+            Despite significant advances in image editing models, they often fail to address real-world user needs. Current datasets lack the scale and ecological validity necessary to capture the true diversity of user requests, as they primarily rely on artificial edits rather than authentic user interactions.
+          </p>
+          <figure class="image" style="width: 100%; margin: 2rem 0;">
+            <img src="./static/images/figure_2_soldier.jpg" alt="Comparison of baseline and our model on photograph restoration" style="width: 100%; height: auto; max-width: 1200px; margin: 0 auto; display: block;">
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce REALEDIT, a large-scale dataset comprising authentic image editing requests and their corresponding human-made edits, sourced from two prominent Reddit communities: <a href="https://www.reddit.com/r/estoration/">r/estoration</a> and <a href="https://www.reddit.com/r/PhotoshopRequest/">r/PhotoshopRequest</a>. This dataset captures real-world editing scenarios and user preferences.
+          </p>
+          <figure class="image" style="width: 100%; margin: 2rem 0;">
+            <img src="./static/images/data_figure_large.jpg" alt="Overview of the REALEDIT dataset" style="width: 100%; height: auto; max-width: 1200px; margin: 0 auto; display: block;">
+          </figure>
+          <!-- <p>
+            Our dataset consists of 151K images, carefully split into training and test sets. The test set contains 9.3K examples for community evaluation, while the training set includes 48K examples for model development.
+          </p>
+          <figure class="image" style="width: 100%; margin: 2rem 0;">
+            <img src="./static/images/placeholder.jpg" alt="Dataset breakdown between test and training subsets" style="width: 100%; height: auto; max-width: 1200px; margin: 0 auto; display: block;">
+          </figure> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            We train our REALEDIT model on the collected dataset and evaluate it against state-of-the-art baselines using a comprehensive set of metrics.
+          </p>
+          <p>
+            Our model achieves substantial improvements across multiple evaluation metrics, including a 92% relative improvement on the VIEScore metric and outperforming competitors by up to 165 Elo points in human judgment.
+          </p>
+          <figure class="image" style="width: 100%; margin: 2rem 0;">
+            <img src="./static/images/realedit_results.png" alt="Quantitative evaluation results table" style="width: 100%; height: auto; max-width: 1200px; margin: 0 auto; display: block;">
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our model demonstrates robust performance across diverse real-world editing scenarios, from photo restoration to complex object manipulation. The results showcase the effectiveness of training on authentic user requests and human-made edits.
+          </p>
+          <figure class="image" style="width: 100%; margin: 2rem 0;">
+            <img src="./static/images/ex_page_1.jpg" alt="Example 1 of our model's image editing capabilities" style="width: 100%; height: auto; max-width: 1200px; margin: 0 auto; display: block;">
+          </figure>
+          <figure class="image" style="width: 100%; margin: 2rem 0;">
+            <img src="./static/images/ex_page_2.jpg" alt="Example 2 of our model's image editing capabilities" style="width: 100%; height: auto; max-width: 1200px; margin: 0 auto; display: block;">
+          </figure>
+          <!-- <figure class="image" style="width: 100%; margin: 2rem 0;">
+            <img src="./static/images/ex_page_3.jpg" alt="Example 3 of our model's image editing capabilities" style="width: 100%; height: auto; max-width: 1200px; margin: 0 auto; display: block;">
+          </figure> -->
+        </div>
+      </div>
+    </div>
 
     <div class="columns is-centered has-text-centered" style="margin-top: 3rem;">
       <div class="column is-four-fifths">
